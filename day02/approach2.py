@@ -1,3 +1,4 @@
+# first approach i thought of, it needs a lot of if statements tho
 
 totalPoints = 0
 plays = []  # array storing both plays in a round -> plays[A,X]

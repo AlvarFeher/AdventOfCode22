@@ -1,5 +1,4 @@
 
-
 totalPoints = 0
 with open("day02/input.txt") as file:
     rounds = [i for i in file.read().strip().split("\n")]

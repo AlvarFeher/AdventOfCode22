@@ -1,7 +1,9 @@
 with open("day05/input.txt") as file:
     moves = [i for i in file.read().strip().split("\n")]
 
+
 init = [
+
     ["V", "N", "F", "S", "M", "P", "H", "J"],
     ["Q", "D", "J", "M", "L", "R", "S"],
     ["B", "W", "S", "C", "H", "D", "Q", "N"],
@@ -22,7 +24,10 @@ for move in moves:
 
     # move crates
     cratesToMOve = init[src][:amount]  # get crates that will be moved
-    print(cratesToMOve)
+
     init[src] = init[src][amount:]
-    init[dst] = init[dst].append(cratesToMOve)
-    print(init[dst])
+    init[dst] = list(reversed(cratesToMOve)) + init[dst]
+
+
+for stack in init:
+    print(stack[0])
